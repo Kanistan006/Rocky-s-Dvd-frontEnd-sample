@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manger_Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="managerbg">
+
+    <div class="mangerpage">
+        <div class="dashboard">
+            <h1>Dashboard</h1>
+            <ul>
+                <li><a href="#" id="dvddetailsbtn">DVD Details</a></li>
+                <li><a href="#" id="cusdetailsbtn">Customer Details</a></li>
+                <li><a href="#" id="notificationbtn">Notification</a></li>
+
+                <li>
+                    <label for="">Reports</label>
+                    <select name="" id="reportSelect">
+                        <option value="none">Select a Report</option>
+                        <option value="inventory_Report"><a href="" id="inventoryrepo">Inventory Report</a></option>
+                        <option value="customer_Report"><a href="" id="customerrepo">Customer Report</a></option>
+                        <option value="rental_Report"><a href="" id="rentalrepo">Rental Report</a></option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="mangerbody">
+
+
+
+
+            <div class="welcomecnt" id="welcomecnt">
+                <h1>Welcome back, Admin! Your expertise is what keeps our rental service shining. Ready to get started?
+                </h1>
+                <h3>"Let’s make today a great one!"</h3>
+            </div>
+
+
+            <!-- dvddetails -->
+            <div class="dvddetails" id="dvddetails" style="display: none;">
+                <h2>Dvd Details</h2>
+                <button id="addbtn">Add_DVD</button>
+
+                <div id="adddvd" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn">&times;</span>
+                        <h2 class="modal-title">Add Dvd</h2>
+                        <div class="modal-body">
+                            <form action="">
+                                <input type="text" id="dvdid" placeholder="DVD Id" required>
+                                <input type="text" id="dvdname" placeholder="Movie Name" required>
+                                <input type="file" id="dvdimage" placeholder="DVD Image">
+                                <input type="text" id="category" placeholder="Category" required>
+                                <input type="text" id="director" placeholder="Director" required>
+                                <input type="date" id="reldate" placeholder="Released Date" required>
+                                <input type="number" id="quantity" placeholder="Quantity" required>
+                                <input type="number" id="price" placeholder="Price" required>
+                                <button class="registerbtn" id="registerbtn">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dvd_ID</th>
+                            <th>Dvd_Name</th>
+                            <th>Dvd_Image</th>
+                            <th>Category</th>
+                            <th>Director</th>
+                            <th>Release_Date</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dvdtbody">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- cusdetails -->
+            <div class="cusdetails" id="cusdetails" style="display: none;">
+                <h2>Customer Details</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Customer_Name</th>
+                            <th>Nic_Number</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                        </tr>
+                    </thead>
+                    <tbody id="custbody">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- notifications -->
+            <div class="notifications" id="notification" style="display: none;">
+                <h2>Notifications</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User_Name</th>
+                            <th>Dvd_Name</th>
+                            <th>Rent_Date</th>
+                            <th>Return_Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="notifitbody">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- reports -->
+            <!-- inventoryrepo -->
+            <div class="inventoryrepo" style="display: none;">
+                <h2>Inventory Report</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Shop Name</th>
+                            <th>DVD Category</th>
+                            <th>Total DVDs</th>
+                            <th>Available Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventorytbody"></tbody>
+
+                </table>
+
+
+
+            </div>
+
+            <!-- customerrepo -->
+            <div class="customerrepo" style="display: none;">
+                <h2>Customer Report</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Shop Name</th>
+                            <th>Total Customers</th>
+                            <th>Active Customers</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customertbody"></tbody>
+
+                </table>
+
+
+            </div>
+
+            <!-- rentalrepo -->
+            <div class="rentalrepo" style="display: none;">
+                <h2>Rental Report</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Shop Name</th>
+                            <th>DVD Category</th>
+                            <th>Rented DVDs</th>
+                            <th>Overdue</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rentaltbody"></tbody>
+
+                </table>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="datas.js"></script>
+    <script src="manager.js"></script>
+
+
+
+</body>
+
+</html>

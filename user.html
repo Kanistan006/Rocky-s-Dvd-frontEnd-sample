@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User_page</title>
+    <style>
+
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="userbg">
+    <h1 class="userheading">Dvds View</h1>
+    <nav>
+        <input type="search" placeholder="Search Movie" id="searchdvd" class="searchdvd">
+        <a href="user.html" class="atag">ViewMovies</a>
+        <a href="#" id="userrepo" class="atag">Reports</a>
+        <a href="#" id="userprofile" class="atag">UserProfile</a>
+    </nav>
+
+    <!-- gridview for movies -->
+    <div id="userviewbody">
+        <div id="gridview">
+
+        </div>
+    </div>
+
+    <!-- table view in reports -->
+    <div id="userrepotable" style="display: none;">
+        <table>
+            <thead>
+                <tr>
+                    <th>User_Name</th>
+                    <th>Dvd_Name</th>
+                    <th>Rent_Date</th>
+                    <th>Return_Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="userepotable">
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- users profiles -->
+    <div id="userprofileform" style="display: none;">
+        <form action="" class="userform">
+            <div class="inputset">
+                <label>Name</label>
+                <input id="profile-name">
+            </div>
+            <div class="inputset">
+                <label>NIC Number</label>
+                <input id="profile-nicno" readonly>
+            </div>
+            <div class="inputset">
+                <label>Password</label>
+                <input id="profile-password" type="password">
+            </div>
+            <div class="inputset">
+                <label>E-mail</label>
+                <input id="profile-email" type="email">
+            </div>
+            <div class="inputset">
+                <label>Mobile-Number</label>
+                <input id="profile-mobile" type="tel">
+            </div>
+            <button type="button" id="saveProfileBtn">Save</button>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="datas.js"></script>
+    <script src="user.js"></script>
+
+    <script>
+
+
+    </script>
+</body>
+
+</html>
